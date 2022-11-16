@@ -1,0 +1,44 @@
+:root {
+    /* Font Collection */
+    font-family: 'Poppins', sans-serif;
+    --font-biggest : 80px;
+    --font-bigger : 40px;
+    --font-big : 24px;
+    --font-medium : 18px;
+    --font-small : 16px;
+
+    /* Color Collection */
+    --color-green : #7AB730;
+    --color-white : #ffffff;
+    --color-grey : #656565;
+    --color-black : #212121;
+
+}
+
+* {
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+
+/* Contact Part */
+#contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1sfr;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.contact__office {
+    display: flex;
+    border-right: 1px solid var(--color-grey);
+    justify-content: center;
+    align-items: centers;
+}
+.contact__office i {
+    font-size: 50px;
+    color : var(--color-green);
+}
+.contact__office:last-child {
+    border-right: none;
+}
+
