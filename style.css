@@ -74,7 +74,7 @@ i {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
+    width: 88%;
     font-weight: 900;
     height: 100%;
 }
@@ -91,21 +91,26 @@ i {
     display: flex;
     align-items: center;
     height: 100%;
+    
 }
 .nav__left--menu li {
     margin-right: 25px;
     height: 100%;
     display: flex;
     align-items: center;
+    font-size: var(--font-medium);
 }
-.nav__left--menu li:hover {
-    border-top: 2px solid var(--color-green);
-    transition: all 1s;
+.nav__left--menu li a {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
+
 .nav__left--menu li:hover a {
     color : var(--color-green);
-    transition: all 1s;
+    transition: all 0.4s;
 }
+
 .nav__left--menu li:last-child a{
     display: flex;
     align-items: center;
@@ -118,10 +123,15 @@ i {
     justify-content: center;
     color : var(--color-gray);
 }
+.nav__left--menu li:hover a i {
+    color : var(--color-green);
+    transition: all 0.4s;
+}
 .nav__right {
     background-color: var(--color-green);
-    width: 15%;
+    width: 12%;
     height: 100%;
+    font-size: var(--font-medium);
 }
 .nav__right a{
     display: flex;
@@ -137,3 +147,67 @@ i {
     font-size: var(--font-small);
 }
 
+/* Header Part */
+#header {
+    width: 100%;
+    background: url(./img/hero.jpg) no-repeat top/cover;
+    padding : 100px 150px;
+}
+.header__container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.header--title {
+    font-size: var(--font-biggest);
+    font-weight: 900;
+    color : var(--color-black);
+    margin-bottom: 20px;
+}
+.header--subtitle {
+    font-size: var(--font-bigger);
+    color : var(--color-white);
+    margin-bottom: 15px;
+}
+.header--content {
+    font-size: var(--font-big);
+    color : var(--color-white);
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.header__additional {
+    display: flex;
+    align-items: center;
+}
+.additional__readMore-btn {
+    font-size: var(--font-small);
+    color : var(--color-white);
+    padding : 20px 40px;
+    border: 2px solid var(--color-white);
+    background-color: transparent;
+    margin-right: 60px;
+}
+.additional__readMore-btn a {
+    color: var(--color-white);
+    font-weight: 600;
+}
+.additional__playBtn {
+    border-radius: 50%;
+    background-color: var(--color-white);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.additional__playBtn i {
+    font-size: var(--font-bigger);
+}
+.additional__playVideo a{
+    font-size: var(--font-medium);
+    color : var(--color-white);
+    font-weight: 600;
+}
+
+/* About Part */
