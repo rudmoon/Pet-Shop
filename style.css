@@ -10,7 +10,7 @@
     /* Color Collection */
     --color-green : #7AB730;
     --color-white : #ffffff;
-    --color-grey : #656565;
+    --color-gray : #656565;
     --color-black : #212121;
 
 }
@@ -20,25 +20,120 @@
     margin : 0;
     box-sizing: border-box;
 }
-
+ul,li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: var(--color-black);
+}
+i {
+    font-size: 50px;
+    color : var(--color-green);
+}
 /* Contact Part */
 #contact {
     display: grid;
-    grid-template-columns: 1fr 1fr 1sfr;
-    border-bottom: 1px solid var(--color-grey);
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--color-gray);
 }
 
 .contact__office {
     display: flex;
-    border-right: 1px solid var(--color-grey);
+    border-right: 1px solid var(--color-gray);
     justify-content: center;
-    align-items: centers;
+    align-items: center;
+    padding : 10px;
 }
 .contact__office i {
     font-size: 50px;
     color : var(--color-green);
+    margin-right: 20px;
 }
 .contact__office:last-child {
     border-right: none;
+}
+.office__right p {
+    padding : 2px 0;
+}
+.office__right p:nth-of-type(1) {
+    font-weight: 600;
+}
+
+/* Nav Part */
+#nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    font-weight: 900;
+    height: 100%;
+}
+.nav__left--logo {
+    color : var(--color-black);
+    font-size: var(--font-bigger);
+    margin-left: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__left--menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.nav__left--menu li {
+    margin-right: 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav__left--menu li:hover {
+    border-top: 2px solid var(--color-green);
+    transition: all 1s;
+}
+.nav__left--menu li:hover a {
+    color : var(--color-green);
+    transition: all 1s;
+}
+.nav__left--menu li:last-child a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav__left--menu li:last-child a i {
+    margin-left: 2px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color : var(--color-gray);
+}
+.nav__right {
+    background-color: var(--color-green);
+    width: 15%;
+    height: 100%;
+}
+.nav__right a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color : var(--color-white);
+    height: 100%;
+}
+.nav__right a i {
+    margin-left: 6px;
+    color : white;
+    font-size: var(--font-small);
 }
 
