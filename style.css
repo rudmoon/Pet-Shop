@@ -2,6 +2,7 @@
     /* Font Collection */
     font-family: 'Poppins', sans-serif;
     --font-biggest : 80px;
+    --font-title : 48px;
     --font-bigger : 40px;
     --font-big : 24px;
     --font-medium : 18px;
@@ -37,18 +38,18 @@ i {
 #contact {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border-bottom: 1px solid var(--color-gray);
+    border-bottom: 1px solid #d7d5d5;
 }
 
 .contact__office {
     display: flex;
-    border-right: 1px solid var(--color-gray);
+    border-right: 1px solid #d7d5d5;
     justify-content: center;
     align-items: center;
     padding : 10px;
 }
 .contact__office i {
-    font-size: 50px;
+    font-size: 40px;
     color : var(--color-green);
     margin-right: 20px;
 }
@@ -86,7 +87,9 @@ i {
     display: flex;
     align-items: center;
 }
-
+.nav__left--logo i {
+    font-size: 36px;
+}
 .nav__left--menu {
     display: flex;
     align-items: center;
@@ -151,10 +154,12 @@ i {
 #header {
     width: 100%;
     background: url(./img/hero.jpg) no-repeat top/cover;
-    padding : 100px 150px;
+    margin-bottom: var(--font-biggest);
+    padding : 100px 0;
 }
 .header__container {
-    width: 80%;
+    margin : 0 auto;
+    width: 88%;
     display: flex;
     flex-direction: column;
 }
@@ -211,3 +216,70 @@ i {
 }
 
 /* About Part */
+#about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--font-biggest);
+}
+.about__container {
+    margin : 0 auto;
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+}
+.about__dogImage {
+    width: 38%;
+    height: 100%;
+}
+.about__description {
+    width: 59%;
+    height: 100%;
+}
+.description__title--box {
+    border-left: 5px solid var(--color-green);
+    padding-left: 25px;
+    margin-bottom: 35px;
+}
+.title--box-first {
+    font-size: var(--font-small);
+    color : var(--color-green);
+}
+.title--box-second, .title--box-third {
+    font-size: var(--font-title);
+    color : var(--color-black);
+}
+.description__p {
+    font-size: var(--font-big);
+    font-weight: 700;
+    color: var(--color-gray);
+    margin-bottom: var(--font-small);
+}
+.description__goalBox {
+    background-color: #f3f3f3;
+    padding : 15px 24px;
+}
+.goalBox--menu-line {
+    display: flex;
+    width: 100%;
+}
+.menu-lines {
+    width: 50%;
+    border: none;
+    padding : 20px 30px;
+}
+.menu-lines a {
+    color : var(--color-green);
+}
+.menu-lines.active, .menu-lines.active a {
+    background-color: var(--color-green);
+    color : var(--color-white);
+}
+.goalBox--p {
+    padding-top: var(--font-small);
+    font-size: var(--font-small);
+    font-weight: 500;
+    color : var(--color-gray);
+}
+
+/* Services Part */
