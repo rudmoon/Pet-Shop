@@ -238,7 +238,7 @@ i {
 }
 .description__title--box {
     border-left: 5px solid var(--color-green);
-    padding-left: 25px;
+    padding-left: 35px;
     margin-bottom: 35px;
 }
 .title--box-first {
@@ -283,3 +283,301 @@ i {
 }
 
 /* Services Part */
+#services {
+    margin-bottom: var(--font-biggest);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.services__container {
+    width: 88%;
+    
+}
+.services__title--box {
+    border-left: 5px solid var(--color-green);
+    padding-left: 25px;
+    margin-bottom: 35px;
+}
+.services__info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+.infos {
+    display: flex;
+    justify-content: space-between;
+    width: 47%;
+    background-color: #f3f3f3;
+    margin-bottom: 50px;
+    padding : 20px 35px;
+}
+.infos:nth-child(2n+1) {
+    margin-right: 6%;
+}
+.infos>i {
+    margin-right: 20px;
+}
+.infos__desc--subtitle {
+    font-size: var(--font-small);
+    font-weight: 350;
+}
+.infos__desc--radMore {
+    display: flex;
+    align-items: center;
+}
+.infos__desc--radMore i,.infos__desc--radMore a {
+    font-size: var(--font-small);
+}
+.infos__desc--title {
+    font-size: var(--font-medium);
+    margin-bottom: var(--font-small);
+}
+.infos__desc--subtitle {
+    font-size: var(--font-small);
+    color: var(--color-gray);
+    font-weight: 400;
+    margin-bottom: var(--font-small);
+}
+
+/* Products Part */
+#products {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--font-biggest);
+}
+.products__container {
+    width: 88%;
+    height: 680px;
+    position: relative;
+    overflow: hidden;
+}
+.products__title--box {
+    border-left: 5px solid var(--color-green);
+    padding-left: 35px;
+    margin-bottom: 35px;
+}
+.products__list {
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+.products__list li {
+    position: absolute;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.list__upBox {
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
+.list__upBox>img {
+    width: 90%;
+    margin-bottom: var(--font-small);
+}
+.list__upBox>h5 {
+    margin-top: var(--font-small);
+    color : var(--color-green);
+    font-size: var(--font-medium);
+}
+.list__downBox {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.list__downBox button {
+    width: 15%;
+    border: none;
+    margin : 15px 2px;
+}
+.list__downBox button i {
+    
+    color : white;
+    background-color: var(--color-green);
+    font-size: 12px;
+}
+
+
+.products__container button i {
+    color : var(--color-white);
+    font-size: var(--font-bigger);
+}
+#products__prevBtn {
+    transform: translateX(-110%);  
+    position: absolute;
+    bottom: 1%;
+    left : 50%;
+    background-color: var(--color-green);
+    border-radius: 4px;
+    border: none;
+    padding : 5px;
+}
+#products__nextBtn {
+    transform: translateX(10%);
+    position: absolute;
+    bottom: 5px;
+    left : 50%;
+    background-color: var(--color-green);
+    border-radius: 4px;
+    border: none;
+    padding : 5px;
+}
+
+/* Special Part */
+#special {
+    width: 100%;
+    background: url(./img/offer.jpg) no-repeat top/cover;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--font-biggest);
+}
+.special__container {
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+}
+.special__title--box {
+    border-left: 5px solid var(--color-black);
+    padding-left: 35px;
+    margin-bottom: 35px;
+    margin-top: var(--font-biggest);
+}
+.special__title--box>.title--box-third, .special__title--box>.title--box-second {
+    color : var(--color-white);
+}
+.special__description {
+    width: 55%;
+    color : var(--color-white);
+    font-size: var(--font-small);
+    font-weight: 500;
+    margin-bottom: var(--font-bigger);
+}
+.special__btns {
+    display: flex;
+    margin-bottom: var(--font-biggest);
+}
+.special__btns button {
+    border: 1px solid var(--color-white);
+    padding: 20px 32px;
+    background-color: transparent;
+    color: var(--color-white);
+    font-weight: 600;
+}
+.special__btns button a {
+    color : var(--color-white);
+}
+.special__btns button.active {
+    background-color: transparent;
+    background-color: var(--color-white);
+    border: none;
+}
+.special__btns button.active a {
+    color : var(--color-black);
+}
+.special__btns button:first-child {
+    margin-right: var(--font-small);
+}
+
+/* Pricing Part */
+#pricing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 580px;
+}
+.pricing__container {
+    width: 88%;
+}
+.pricing__title--box {
+    border-left: 5px solid var(--color-green);
+    padding-left: 35px;
+    margin-bottom: 35px;
+}
+.pricing__info {
+    position: relative;
+    margin-top: var(--font-biggest);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+/* .pricing__info:hover {
+    bottom: 50px;
+} */
+.info--list {
+    position: absolute;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32%;
+}
+.info--list:nth-child(2) {
+    margin-left: 2%;
+    left: 32%;
+}
+.info--list:nth-child(3) {
+    margin-left: 2%;
+    left: 66%;
+}
+.list__title {
+    font-size: 32px;
+    font-weight: 800;
+    padding : 20px 32px;
+}
+.list__subtitle {
+    color : var(--color-gray);
+    font-weight: 600;
+    padding-bottom : 20px;
+}
+.list__realMoney {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    font-size: 56px;
+    background-color: var(--color-green);
+    color : var(--color-white);
+    padding: 10px 0 ;
+}
+.list__realMoney > p {
+    font-size: var(--font-small);
+}
+.list__ability1,.list__ability2,.list__ability3,.list__ability4 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding : 25px 60px 0 60px;
+    color : var(--color-gray);
+}
+.list__ability1 i,.list__ability2 i,.list__ability3 i, .list__ability4 i {
+    font-size: var(--font-small);
+}
+.fa-solid.fa-x {
+    color : tomato;
+}
+.info--list button {
+    margin: var(--font-big) 0;
+    border: none;
+    background-color: var(--color-green);
+    padding : 12px 20px;
+}
+.info--list button:hover a{
+    color : var(--color-black);
+    transition: all 0.4s;
+}
+.info--list button a {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+/* Team Part */
