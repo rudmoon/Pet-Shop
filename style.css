@@ -70,22 +70,18 @@ i {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.nav__left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 88%;
-    font-weight: 900;
-    height: 100%;
+    margin-right: 0;
 }
 .nav__left--logo {
     color : var(--color-black);
     font-size: var(--font-bigger);
-    margin-left: 40px;
     height: 100%;
     display: flex;
+    font-weight: 900;
     align-items: center;
+}
+.nav__left--logo, .nav__left--menu li:last-child {
+    padding : 0 20px;
 }
 .nav__left--logo i {
     font-size: 36px;
@@ -94,60 +90,56 @@ i {
     display: flex;
     align-items: center;
     height: 100%;
-    
 }
 .nav__left--menu li {
-    margin-right: 25px;
     height: 100%;
+    margin-right: 35px;
     display: flex;
     align-items: center;
     font-size: var(--font-medium);
+    cursor: pointer;
+}
+.nav__left--menu li:last-child {
+    background-color: var(--color-green);
+    margin-right: 0;
+    
 }
 .nav__left--menu li a {
     height: 100%;
     display: flex;
     align-items: center;
+    font-weight: 600;
+}
+.nav__left--menu li:last-child a {
+    color : var(--color-white);
+}
+.nav__left--menu li i {
+    font-size: var(--font-medium);
+    margin-left: 5px;
 }
 
-.nav__left--menu li:hover a {
-    color : var(--color-green);
-    transition: all 0.4s;
-}
 
-.nav__left--menu li:last-child a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .nav__left--menu li:last-child a i {
     margin-left: 2px;
     font-size: 20px;
     display: flex;
     justify-content: center;
-    color : var(--color-gray);
+    color : var(--color-white);
 }
 .nav__left--menu li:hover a i {
     color : var(--color-green);
     transition: all 0.4s;
 }
-.nav__right {
-    background-color: var(--color-green);
-    width: 12%;
-    height: 100%;
-    font-size: var(--font-medium);
+.nav__left--menu li:hover a {
+    color : var(--color-green);
+    transition: all 0.4s;
 }
-.nav__right a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 900;
+.nav__left--menu li:last-child:hover a,.nav__left--menu li:last-child:hover i {
     color : var(--color-white);
-    height: 100%;
 }
-.nav__right a i {
-    margin-left: 6px;
-    color : white;
-    font-size: var(--font-small);
+.nav__hide {
+    display: none;
 }
 
 /* Header Part */
@@ -777,4 +769,59 @@ i {
 #gotoTop-arrow i {
     font-size: var(--font-big);
     color : var(--color-white);
+}
+
+
+/* Responsive CSS3 */
+@media screen and (max-width:968px) {
+    #contact {
+        display: none;
+    }
+    #nav {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav__left--logo {
+        margin: 20px 0;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .nav__left--menu {
+        width: 100%;
+        margin-top: -10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .nav__left--menu li {
+        margin-right: 0;
+        margin-bottom: 2px;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .nav__left--menu li:last-child {
+        margin-bottom: 0;
+    }
+    .nav__left--menu li a {
+        width: 100%;
+    }
+    .nav__hide {
+        display: block;
+        position: absolute;
+        top : 20px;
+        right : 20px;
+        border: 1px solid #f3f3f3;
+        padding : 4px;
+    }
+    .nav__hide i {
+        color : var(--color-gray);
+        font-size: var(--font-bigger);
+    }
+    .nav__left--menu.hide {
+        display: none;
+    }
 }

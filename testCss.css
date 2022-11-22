@@ -1,0 +1,28 @@
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+p {
+    width: 500px;
+    height: 300px;
+    margin: 200px 0 0 200px;
+    position: relative;
+}
+strong {
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    left:-50%;   
+    transform: translateX(-50%);
+}
+span {
+    position: absolute;
+    box-shadow: inset 30px 30px 50px rgba(50,30,0,0.6);
+    opacity: 0;
+    width: 500px;
+    height: 300px;
+    left: 0;
+    top: 0;
+}
