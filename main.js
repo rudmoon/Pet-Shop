@@ -26,19 +26,42 @@ $(document).ready(function() {
     })
     
     // 3) Navbar menu click => Auto scroll to specific position
-
-    const yPositions = [$('#about').offset().top-20,$('#services').offset().top-20,$('#products').offset().top-20,$('#comprehensive').offset().top-20];
+    
+    window.onresize = function(){
+        document.location.reload();
+    };
+    const yPositions = [$('#about').position().top,$('#services').offset().top,$('#products').offset().top,$('#comprehensive').offset().top];
     for(let i=1; i<$('.nav--menus').length; i++) {
         $('.nav--menus').eq(i).click(function(ev) {
             ev.preventDefault();
             window.scrollTo({
                 left : 0,
-                top : yPositions[i-1],
+                top : yPositions[i-1]-10,
                 behavior : 'smooth',
             })
         })
     };
 
+    // 4) In pricing part, hover==>up 50px
+    console.log($('.info--list').length);
+    for(let i=0; i<$('.info--list').length; i++) {
+        $('.info--list').eq(i).css({
+            left : i*34 + '%'
+        });
+    };
+    $('.info--list')
+    .mouseover(function() {
+        $(this).stop().animate({
+            top : '-50px',
+        },200)
+    })
+    .mouseout(function() {
+        $(this).stop().animate({
+            top : '0',
+        },200)
+    });
+
+    // 5)
     
 
 
