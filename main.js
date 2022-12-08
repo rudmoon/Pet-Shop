@@ -43,7 +43,6 @@ $(document).ready(function() {
     };
 
     // 4) In pricing part, hover==>up 50px
-    console.log($('.info--list').length);
     for(let i=0; i<$('.info--list').length; i++) {
         $('.info--list').eq(i).css({
             left : i*34 + '%'
@@ -61,15 +60,94 @@ $(document).ready(function() {
         },200)
     });
 
-    // 5)
+    // 5) Products list slide-show
+    let liHeight = $('.products__list li').height();
+    let contHeight = liHeight + 100;
+    
     
 
+    $('.products__sldieshow--container').css("height",contHeight);
+    $('.products__list').css('height',liHeight);
+    
+    let slideList = document.querySelectorAll('.mySlideDiv');
+    let currentIndex = 0;
+    
+    function gotoSlide(idx) {
+        $('.mySlideDiv').each(function(index) {
+            $(this).stop().removeClass('active');
+            slideList[idx].classList.add('active');
+            currentIndex = idx;
+        })
+    }
 
+    gotoSlide(2);
+    $('.products__prevBtn').click(function() {
+        if(currentIndex==0) {
+            $(this).stop().animate({
+                opacity : '0'
+            },100)
+            $('.products__nextBtn').stop().animate({
+                opacity : '1'
+            })
+        } else {
+            $(this).stop().animate({
+                opacity : '1'
+            },100)
+            $('.products__nextBtn').stop().animate({
+                opacity : '1'
+            })
+            gotoSlide(currentIndex-1);
+        }
+    })
+    $('.products__nextBtn').click(function() {
+        if(currentIndex===slideList.length-1) {
+            $(this).stop().animate({
+                opacity : '0'
+            },100)
+            $('.products__prevBtn').stop().animate({
+                opacity : '1'
+            })
+        } else {
+            $(this).stop().animate({
+                opacity : '1'
+            },100)
+            $('.products__prevBtn').stop().animate({
+                opacity : '1'
+            })
+            gotoSlide(currentIndex+1);
+        }
+    })
+    
+    // 이부분이 왜 안되는지 모르겠네..
+    $('.mySlideDiv').mouseover(function() {
+        $(this).find('button').stop().animate({
+            opacity : 1
+        },300)
+        
+    }). mouseout(function() {
+        $(this).find('button').stop().animate({
+            // height : '0',
+            opacity : 0
+        },300);
+    });
+    
+    //6) Team list slide-show
 
-
-
-
-
+    let teamContain = $('.introduce__cover');
+    let teamUl = teamContain.find('ul');
+    let teamLi = teamUl.find('li');
+    let teamPrev = teamContain.find('#team__prevBtn');
+    let teamNext = teamContain.find('#team__nextBtn');
+    let teamslideCount = teamLi.length;
+    let currentIdx = 0;
+    
+    
+    teamLi.each(function(i) {
+        $(this).css({
+            left : i*26 + '%'
+        })
+    })
+    
 
 
 
