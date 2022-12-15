@@ -668,17 +668,19 @@ i {
 }
 .introduce__cover {
     position: relative;
-    height: 430px;
+    height: 460px;
+    overflow: hidden;
 }
 .team__introduce {
     position: absolute;
     width: 100%;
 }
 .team__introduce--member {
-    position: absolute;
     width: 22%;
-    height: 350px;
+    height: 370px;
     margin-right: 4%;
+    margin-bottom: 100px;
+    float : left;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -686,6 +688,9 @@ i {
     align-items: center;
     text-align: center;
     background-color: #f3f3f3;
+}
+.team__introduce--member:last-child {
+    margin-right: 0;
 }
 .member__full-name, .member__designation {
     padding : 3%;
@@ -1015,6 +1020,30 @@ i {
     }
     #pricing {
         margin-bottom: var(--font-biggest);
+    }
+    .introduce__cover {
+        width: 100%;
+        height: 900px;
+    }
+    #team {
+        margin-bottom: var(--font-bigger);
+    }
+    .team__introduce {
+        position: static;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    .team__introduce--member {
+        width: 48%;
+        height: 400px;
+        clear : both;
+        margin-right: 4%;
+        margin-bottom: 50px;
+    }
+    .team__introduce--member:nth-child(2n) {
+        margin-right: 0;
     }
 }
 

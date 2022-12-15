@@ -131,23 +131,10 @@ $(document).ready(function() {
         },300);
     });
     
-    //6) Team list slide-show
+    
 
-    let teamContain = $('.introduce__cover');
-    let teamUl = teamContain.find('ul');
-    let teamLi = teamUl.find('li');
-    let teamPrev = teamContain.find('#team__prevBtn');
-    let teamNext = teamContain.find('#team__nextBtn');
-    let teamslideCount = teamLi.length;
-    let currentIdx = 0;
-    
-    
-    teamLi.each(function(i) {
-        $(this).css({
-            left : i*26 + '%'
-        })
-    })
-    
+
+
 
 
 
