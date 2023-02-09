@@ -9,6 +9,7 @@
  <img src="https://img.shields.io/badge/HTML5-orange?style=flat&logo=HTML5&logoColor=white"/>
  <img src="https://img.shields.io/badge/CSS3-blue?style=flat&logo=CSS3&logoColor=white"/>
  <img src="https://img.shields.io/badge/JavaScript-yellow?style=flat&logo=JavaScript&logoColor=white"/>
+ <img src="https://img.shields.io/badge/jQuery-green?style=flat&logo=JavaScript&logoColor=white"/>
 </div>
 </br>
 
@@ -19,8 +20,8 @@
 </div>
 </br>
 
-## JS skills
-* Header영역 자동 Slide-Show(setinteval) and Slide-Show 멈추기(settimeout)
+## JS skills(jQuery 활용)
+* Navbar toggle(Show and hide)
 * Project영역 Slide-Show 2개(각기 다른 스타일)
 * Navbar 자동생성 및 기능(When Reponsive)
 * Responsive media query(사이즈가 줄어들 때마다 자동 새로고침)
