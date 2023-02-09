@@ -13,7 +13,7 @@ $(document).ready(function() {
     $('#gotoTop-arrow').click(function() {
         $('html, body').animate({
             scrollTop : 0
-        },800);
+        });
     });
 
     let docHeight = document.documentElement.offsetHeight;
